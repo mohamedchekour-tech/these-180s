@@ -1,0 +1,110 @@
+/* style.css - styles principaux */
+
+:root{
+    --primary:#6a11cb;
+    --accent:#2575fc;
+    --bg:#f7f9fb;
+    --text:#222;
+    --muted:#666;
+}
+
+/* Reinitialisation simple */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:var(--bg);color:var(--text);}
+
+/* Container */
+.container{width:90%;max-width:1100px;margin:0 auto;padding:20px}
+
+/* HEADER */
+.site-header{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding-bottom:20px}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{    width: 160px;height: auto;object-fit: contain;
+}
+.header-title h1{font-size:1.6rem;margin-bottom:4px}
+.slogan{font-size:0.95rem;opacity:0.95}
+
+/* NAV */
+.main-nav a{color:#fff;margin-left:12px;text-decoration:none;padding:6px 10px;border-radius:6px;transition:background .2s}
+.main-nav a:hover{background:rgba(255,255,255,0.12)}
+
+/* HERO */
+.hero{display:flex;gap:30px;align-items:center;padding:30px 0}
+.hero-left{flex:1;color:#fff}
+.hero-left h2{font-size:1.4rem;margin-bottom:10px}
+.lead{opacity:0.95}
+.cta .btn{margin-right:10px}
+.hero-right{flex:1}
+.video-wrap{background:#000;border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.25)}
+.video-wrap iframe{width:100%;height:250px;border:0}
+
+/* partners logo strip */
+.partners{display:flex;gap:18px;align-items:center;justify-content:center;padding:12px 0}
+
+/* MAIN CARDS */
+main .card{background:#fff;border-radius:10px;padding:20px;margin:18px 0;box-shadow:0 8px 20px rgba(13,16,24,0.06)}
+main h2{margin-bottom:12px;color:var(--primary)}
+
+/* two-column grid helper */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px}
+
+/* small buttons */
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;background:#eee;color:var(--text)}
+.btn.small{padding:8px 10px;font-size:0.9rem}
+.btn.primary{background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;box-shadow:0 6px 18px rgba(106,17,203,0.18)}
+
+/* calendar table */
+.calendar{width:100%;border-collapse:collapse;margin:12px 0}
+.calendar th, .calendar td{padding:10px;border:1px solid #e6e9ee;text-align:left}
+.calendar th{background:#f1f3fb}
+
+/* program grid */
+.program-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+.program-day{background:linear-gradient(180deg,#ffffff,#fbfbff);border-radius:8px;padding:12px;border:1px solid #eef}
+
+/* speakers list */
+.speakers{list-style:none;margin-top:10px}
+.speakers li{padding:6px 0;border-bottom:1px dashed #eee}
+
+/* videos grid */
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.video-grid iframe{width:100%;height:200px;border:0;border-radius:6px}
+
+/* chips */
+.chips span{display:inline-block;background:#fff;padding:8px 12px;margin:6px;border-radius:20px;border:1px solid #eef;box-shadow:0 6px 16px rgba(13,16,24,0.03)}
+
+/* news & gallery */
+.news{margin-bottom:14px}
+.gallery{display:flex;gap:8px;flex-wrap:wrap}
+.gallery img{width:32%;border-radius:6px;object-fit:cover}
+
+/* contact form */
+.contact-form{display:grid;gap:10px;max-width:520px}
+.contact-form input, .contact-form textarea{padding:10px;border-radius:8px;border:1px solid #ddd}
+.contact-form label{font-weight:600;color:var(--muted)}
+.contact-info{margin-top:12px}
+.social a{display:inline-block;padding:6px 10px;border-radius:6px;background:#fff;margin-right:6px;text-decoration:none;color:var(--text)}
+
+/* partenaires grid */
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+.partner{display:flex;gap:12px;align-items:center;padding:10px;border:1px solid #eef;border-radius:8px;text-decoration:none;color:inherit;background:#fff}
+.partner img{width:120px;height:50px;object-fit:contain;border-radius:6px}
+
+/* FOOTER */
+.site-footer{background:#121416;color:#ddd;padding:18px 0;margin-top:20px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+
+/* Responsive */
+@media (max-width:900px){
+    .header-top{flex-direction:column;align-items:flex-start}
+    .main-nav{margin-top:10px}
+    .hero{flex-direction:column}
+    .video-wrap iframe{height:220px}
+    .grid-2{grid-template-columns:1fr}
+    .video-grid{grid-template-columns:1fr}
+    .gallery img{width:49%}
+}
+@media (max-width:600px){
+    .partners{flex-wrap:wrap}
+    .gallery img{width:100%}
+    .header-title h1{font-size:1.2rem}
+}
